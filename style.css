@@ -1,0 +1,217 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(8, 8, 8);
+  font-family: "Poppins", sans-serif;
+  color: #FFF;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color:#03d5fa;
+  border-radius: 8px;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header img {
+  height: 80px;
+}
+
+header nav {
+  display: flex;
+  gap: 80px;
+}
+
+header nav a {
+  text-decoration: none;
+  color: #FFF;
+  transition: .4s;
+}
+
+header > a {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #03d5fa;
+  padding: 12px 16px;
+  border-radius: 28px;
+  transition: .4s;
+}
+
+header nav a:hover {
+  color: #03d5fa;
+}
+
+#hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 160px;
+}
+
+#hero h1 {
+  font-family: "Montserrat", sans-serif;
+  font-style: italic;
+  font-size: 52px;
+  width:560px;
+  line-height: 56px;
+  margin-bottom: 24px;
+  color:#03e1fa;
+}
+
+#hero p {
+  width: 480px;
+  line-height: 32px;
+  font-weight: 300;
+  margin-bottom: 24px;
+}
+
+#hero a {
+  background-color: #03e1fa;
+  text-decoration: none;
+  color: #FFF;
+  padding: 12px 16px;
+  border-radius: 28px;
+}
+
+#hero img {
+  height: 480px;
+}
+
+#about {
+  margin-top: 320px;
+  display: flex;
+}
+
+#about img {
+  height: 440px;
+}
+
+#about div {
+  margin-left: 120px;
+}
+
+#about h2 {
+  font-family: "Montserrat", sans-serif;
+  font-style: italic;
+  color: #03d5fa;
+  font-size: 80px;
+  margin-bottom: 24px;
+}
+
+#about p {
+  line-height: 32px;
+}
+
+#clients {
+  margin-top: 320px;
+  display: flex;
+  gap: 240px;
+}
+
+#clients div {
+  display: flex;
+  flex-direction: column;
+}
+
+#clients div h2 {
+  font-family: "Montserrat", sans-serif;
+  font-style: italic;
+  color: #03d5fa;
+  font-size: 80px;
+  margin-bottom: 24px;
+}
+
+#clients div p {
+  line-height: 32px;
+  width: 560px;
+}
+
+#clients section {
+  background-color: #0b0b0b;
+  padding: 80px 200px;
+  border-radius: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid #03d5fa;
+  -webkit-box-shadow:0px 0px 79px 0px rgba(3,213,250,0.6);
+  -moz-box-shadow: 0px 0px 79px 0px rgba(3,213,250,0.6);
+  box-shadow: 0px 0px 79px 0px rgba(3,213,250,0.6);
+}
+
+#clients section span {
+  color: #03d5fa;
+  font-style: italic;
+  font-size: 80px;
+}
+
+#clients section p {
+  font-style: italic;
+}
+
+#services {
+  margin-top: 320px;
+}
+
+@media (max-width: 768px) {
+  header {
+    display: none;
+  }
+
+  #hero {
+    flex-direction: column;
+    padding: 12px;
+  }
+
+  #hero div {
+    order: 2;
+  }
+
+  #hero h1 {
+    font-size: 36px;
+    width: auto;
+    line-height: 36px;
+  }
+
+  #hero p {
+    width: auto;
+    line-height: 28px;
+  }
+
+  #hero img {
+    height: 240px;
+    margin-bottom: 80px;
+  }
+
+  #hero a {
+    display: flex;
+    justify-content: center;
+  }
+}
+
