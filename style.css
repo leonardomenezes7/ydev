@@ -12,7 +12,7 @@ html {
 body {
   background-color: rgb(8, 8, 8);
   font-family: "Poppins", sans-serif;
-  color: #FFF;
+  color: #fff;
   overflow-x: hidden;
 }
 
@@ -22,7 +22,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color:#03d5fa;
+  background-color: #03d5fa;
   border-radius: 8px;
 }
 
@@ -50,8 +50,8 @@ header nav {
 
 header nav a {
   text-decoration: none;
-  color: #FFF;
-  transition: .4s;
+  color: #fff;
+  transition: 0.4s;
 }
 
 header > a {
@@ -60,7 +60,7 @@ header > a {
   background-color: #03d5fa;
   padding: 12px 16px;
   border-radius: 28px;
-  transition: .4s;
+  transition: 0.4s;
 }
 
 header nav a:hover {
@@ -78,10 +78,14 @@ header nav a:hover {
   font-family: "Montserrat", sans-serif;
   font-style: italic;
   font-size: 52px;
-  width:560px;
+  width: 560px;
   line-height: 56px;
   margin-bottom: 24px;
-  color:#03e1fa;
+  color: #03e1fa;
+}
+
+#mobile-img {
+  display: none;
 }
 
 #hero p {
@@ -94,13 +98,14 @@ header nav a:hover {
 #hero a {
   background-color: #03e1fa;
   text-decoration: none;
-  color: #FFF;
+  color: #fff;
   padding: 12px 16px;
   border-radius: 28px;
 }
 
 #hero img {
   height: 480px;
+  filter: drop-shadow(0px 4px 10px #03e1fa);
 }
 
 #about {
@@ -110,6 +115,7 @@ header nav a:hover {
 
 #about img {
   height: 440px;
+  filter: drop-shadow(0px 4px 10px #03e1fa);
 }
 
 #about div {
@@ -128,90 +134,182 @@ header nav a:hover {
   line-height: 32px;
 }
 
-#clients {
+#services {
   margin-top: 320px;
   display: flex;
-  gap: 240px;
-}
-
-#clients div {
-  display: flex;
   flex-direction: column;
+  margin-bottom: 320px;
 }
 
-#clients div h2 {
+#services h2 {
   font-family: "Montserrat", sans-serif;
   font-style: italic;
   color: #03d5fa;
   font-size: 80px;
   margin-bottom: 24px;
+  text-align: center;
 }
 
-#clients div p {
-  line-height: 32px;
-  width: 560px;
+#services div {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
 }
 
-#clients section {
-  background-color: #0b0b0b;
-  padding: 80px 200px;
-  border-radius: 28px;
+#services div span {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 2px solid #03d5fa;
-  -webkit-box-shadow:0px 0px 79px 0px rgba(3,213,250,0.6);
-  -moz-box-shadow: 0px 0px 79px 0px rgba(3,213,250,0.6);
-  box-shadow: 0px 0px 79px 0px rgba(3,213,250,0.6);
+  gap: 20px;
+  background-color: rgb(20, 20, 21);
+  padding: 64px 128px;
+  border-radius: 12px;
+  width: 520px;
+  margin: 10px;
+  transition: .4s;
+  font-weight: 600;
 }
 
-#clients section span {
-  color: #03d5fa;
-  font-style: italic;
-  font-size: 80px;
+#services div span:hover {
+  transform: scale(1.03);
 }
 
-#clients section p {
-  font-style: italic;
+#services div span img {
+  height: 80px;
 }
 
-#services {
-  margin-top: 320px;
+footer {
+  background-color: #03d5fa;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+}
+
+footer img {
+  height: 150px;
+}
+
+footer nav {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: black;
+  text-align: center;
+  border-left: 2px solid black;
+  padding-left: 40px;
+}
+
+footer nav a {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+footer nav a img {
+  height: 24px;
 }
 
 @media (max-width: 768px) {
   header {
+    padding: 12px;
+  }
+
+  header nav {
     display: none;
   }
 
   #hero {
     flex-direction: column;
-    padding: 12px;
-  }
-
-  #hero div {
-    order: 2;
+    padding: 0 12px;
+    margin-top: 40px;
   }
 
   #hero h1 {
-    font-size: 36px;
+    font-size: 28px;
     width: auto;
     line-height: 36px;
   }
 
   #hero p {
     width: auto;
-    line-height: 28px;
+    font-size: 16px;
+  }
+
+  #hero div {
+    order: 2;
   }
 
   #hero img {
-    height: 240px;
-    margin-bottom: 80px;
+    height: 300px;
+    width: 500px;
   }
 
   #hero a {
     display: flex;
     justify-content: center;
   }
-}
 
+  #about {
+    flex-direction: column;
+    padding: 0 12px;
+    margin-top: 160px;
+  }
+
+  #about div {
+    margin: 0;
+  }
+
+  #about h2 {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+
+
+  #about img {
+    height: 240px;
+    width: 300px;
+    margin: 40px auto;
+    order: 2;
+  }
+
+  #services {
+    flex-direction: column;
+    margin-top: 120px;
+    padding: 0 12px;
+    margin-bottom: 120px;
+  }
+
+  #services h2 {
+    font-size: 40px;
+  }
+
+  #services div {
+    flex-direction: column;
+  }
+
+  #services div span {
+    width: 320px;
+    text-align: center;
+  }
+
+  footer {
+    flex-direction: column;
+    padding: 24px 12px;
+  }
+
+  footer > img {
+    height: 100px;
+    margin-bottom: 40px;
+  }
+
+  footer nav {
+    border-left: none;
+    padding-left: 0;
+    padding-top: 40px;
+    border-top: 2px solid black;
+  }
+}
